@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope of Variables</title>
+    <script type="text/javascript">
+        var a = 5; //global variable
+        var1 = "Parvez"; //global variable by default
+
+        function myFunc() {
+            var b = 8; //local variable
+            document.write("<h2>"+b+"</h2>");
+            
+            //global variables can be accessed inside functions
+            document.write("<h2>"+a+"</h2>"); 
+        }
+        myFunc();
+        document.write("<h2>" + a + "</h2>");
+        //Local variables cannot be accessed outside functions
+        document.write("<h2>"+b+ "</h2>");
+        
+    </script>
+</head>
+
+<body></body>
+
+</html>

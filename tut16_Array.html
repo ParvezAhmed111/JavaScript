@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <script type="text/javascript">
+        var car1="Audi";
+        var car2="Volvo";
+        var car3="BMW";
+                // 0        1       2
+        var cars=["BMW", "Volvo", "Audi"]
+        document.write("<h2>" + cars +"</h2>");
+        document.write("<h2>" + cars[1] +"</h2>");
+
+        cars.push("Mercedes");
+        cars.push(26213898213);
+
+        for(var i=0; i<cars.length; i++){
+            document.write("<h2>" + cars[i] +"</h2>");
+        }
+
+        var arr1= new Array("a", "b", "c")
+        for(var i=0; i<3; i++){
+            document.write("<h2>" + arr1[i] +"</h2>");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

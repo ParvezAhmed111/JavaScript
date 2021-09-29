@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object part 2</title>
+    <script type="text/javascript">
+        var str = "ajgsaj";
+        var str1 = new String();
+        // document.write("<h2>"+typeof(str)+"</h2>");
+        // document.write("<h2>"+typeof(str1)+"</h2>");
+
+        var car={
+            car_brand: "Tesla",
+            car_model: "Model 3",
+            price: 35000,
+
+            teslaAutoPilot : function(){
+                document.write("<h2> This car has auto pilot </h2>");
+            }
+        }
+        car.fuelType ="Electric";   //adding extra property after defining objects
+        document.write("<h2>"+car.fuelType+"</h2>");
+        
+        //delete a propetry
+        // delete car.price;
+        // document.write("<h2>"+car.price+"</h2>"); //output-> undefined
+        
+        car.price="65421"; //changing datatype of price attrinute from numbre to string
+        document.write("<h2>"+car.price+"</h2>"); //output-> undefined
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

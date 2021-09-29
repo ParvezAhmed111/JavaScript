@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taking input from radiobuttons</title>
+    <script type="text/javascript">
+        function fn1(){
+            var rd1= document.getElementById("rd1");
+            var rd2= document.getElementById("rd2");
+            var rd3= document.getElementById("rd3");
+
+            if(rd1.checked == true){
+                alert("The channel selected id: "+ rd1.value);
+            }
+            else if(rd2.checked == true){
+                alert("The channel selected id: "+ rd2.value);
+            }
+            else if(rd3.checked == true){
+                alert("The channel selected id: "+ rd3.value);
+            }
+            else
+                alert("No channel selected");
+        }
+
+           
+
+    </script>
+</head>
+<body>
+    <input id="rd1" name="grp1" type="radio" value="html">HTML
+    <br>
+    <input id="rd2" name="grp1" type="radio" value="css">CSS
+    <br>
+    <input id="rd3" name="grp1" type="radio" value="JS">JavaScript
+    <br>
+    <br>
+    <button onclick="fn1()" id="btn1">Click Me</button>
+    
+</body>
+</html>

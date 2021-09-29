@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery EVENTS</title>
+    <link rel="stylesheet" href="tut40.css">
+</head>
+
+<body>
+    <h2>Events in jquery</h2>
+    <button id="btn1">Click me 1</button>
+    <button id="btn2">Click me 2</button>
+    <p>This is para outside div</p>
+    <p>This is para outside div</p>
+
+    <div class="myDiv" id="firstdiv" >
+        <p>This is first para in first div</p>
+        <p>This is second para in first div</p>
+    </div>
+    <div class="myDiv" id="seconddiv">
+        <p>This third is para in second div</p>
+    </div>
+    <div class="myDiv" id="thirddiv">
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+    </div>
+   
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        // $("button").dblclick(fn1);
+        // $("#btn1").dblclick(fn1);
+        $("#btn1").mouseenter(fn1);
+        $("#btn1").mouseleave(fn2);
+        $("#btn2").hover(fn1, fn2);
+        function fn1(){
+            $("#firstdiv").fadeOut();
+        }
+        function fn2(){
+            $("#firstdiv").fadeIn();
+        }
+
+    });
+    
+</script>
+</html>

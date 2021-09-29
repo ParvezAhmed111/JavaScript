@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions in JavaScript Part 1</title>
+    <script type="text/javascript">
+        /*
+        Regular Expressions are used to perform powerful pattern matching and search and relplace  functions on text;
+        Website: https://regex101.com/
+    
+        E00-Parvez-Software_developer
+        E00
+    
+        */
+        function validate() {
+            var username = document.getElementById("uname").value;
+            var regx = /E00/i; // i -> makes the regular expression not case sensitive
+
+            if (regx.test(username)){
+                alert("Valid Username");
+            } 
+            else{
+                alert("Invalid Username");
+                document.getElementById("lbluser").style.visibility="visible";
+            }
+    }
+
+    </script>
+
+</head>
+
+<body>
+    <form action="tut26_message.html">
+
+        Username: <input type="text" id="uname" placeholder="Username">
+        <label id="lbluser" style="color: red; visibility: hidden;"> Invaid Username</label>
+        <br><br>
+
+       <button onclick="validate()" type="button">Submit</button>
+
+    </form>
+
+</body>
+
+</html>

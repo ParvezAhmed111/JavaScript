@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selectors</title>
+    <link rel="stylesheet" href="tut39.css">
+</head>
+<!-- 
+jQuery selectors allow you to select and manipulate HTML elements 
+jQuery selectors are used to "find" (or select) HTML elements based on their name, id, classes, types, attributes, values of attributes and much more. 
+It's based on the existing CSS selectors, and in addition, it has some own custom selectors.
+-->
+<body>
+    <h2 class="myheading" id="firsth2">Selectors up jquery</h2>
+    <h2 class="myheading">Selectors up jquery</h2>
+    <h2>Selectors up jquery</h2>
+    <div class="myheading">
+        <p>This is para</p>
+    </div>
+    <button onclick="fn1()" id="btn1">Click me</button>
+</body>
+<script src="jquery.js"></script>
+<script>
+    function fn1(){
+        // $("h2").fadeToggle();
+        // $("#firsth2").fadeToggle();
+        $(".myheading").fadeToggle();
+    }
+</script>
+</html>

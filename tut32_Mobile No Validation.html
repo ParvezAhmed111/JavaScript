@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Number Validation in JavaScript using Regular Expression</title>
+    <script type="text/javascript">
+    /*
+        \d - match any digit (equal to [0-9])
+        \w - match any word character (a-z, A-Z, 0-9 & _)
+        \s - match whitespace character (eg - spaces an tabs)
+        \t - match a tab only
+
+        Try this-->  1st character has to be between 5-9 | next 8 character have to be between a-z | last character has to be 0
+    */
+        function validate() {
+            var text = document.getElementById("text1").value;
+            
+            var regx = /[7-9]\d{9}$/; 
+
+            if (regx.test(text)){
+                document.getElementById("lbltext").innerHTML="Valid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="green";
+            } 
+            else{
+                document.getElementById("lbltext").innerHTML="Invalid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="red";
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h2>Mobile Number Validation in JavaScript using Regular Expression</h2>
+    <br>
+    <form>
+
+        Username: <input type="text" id="text1" placeholder="cellphone">
+        <label id="lbltext" style="color: red; visibility: hidden;"> Invaid Username</label>
+        <br><br>
+
+       <button onclick="validate()" type="button">Submit</button>
+
+    </form>
+
+</body>
+
+</html>

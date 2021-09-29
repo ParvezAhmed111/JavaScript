@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <script type="text/javascript">
+
+        //function without parameters
+        function addNum(){
+            var a = 5;
+            var b = 7;
+            var total = a + b;
+            document.write("<h1> The total is : " + total + "</h1>")
+        }
+        //function call
+        addNum();
+
+        //function with parameters
+        function addNum_Parameters(a, b){
+            var total = a + b;
+            document.write("<h1> The total is : " + total + "</h1>")
+        }
+        addNum_Parameters(6, 9);
+        addNum_Parameters("Parvez ", "Ahmed");
+
+        ////return type function
+        function addNum_return(a, b){
+            var total = a + b;
+            return total;
+        }
+
+        var output= addNum_return("Parvez ", "Ahmed");
+        document.write("<h1> The total is : " + output + "</h1>")
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

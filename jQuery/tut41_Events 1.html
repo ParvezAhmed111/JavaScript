@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery EVENTS</title>
+    <link rel="stylesheet" href="tut40.css">
+</head>
+
+<body>
+    <h2>Events in jquery</h2>
+    <p>This is para outside div</p>
+    <p>This is para outside div</p>
+
+    <div class="myDiv" id="firstdiv" >
+        <p>This is first para in first div</p>
+        <p>This is second para in first div</p>
+    </div>
+    <div class="myDiv" id="seconddiv">
+        <p>This third is para in second div</p>
+    </div>
+    <div class="myDiv" id="thirddiv">
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+    </div>
+    <button id="btn1">Click me</button>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $("button").click(fn1);
+        function fn1(){
+            $("#firstdiv").fadeToggle();
+        }
+
+    });
+    
+</script>
+</html>

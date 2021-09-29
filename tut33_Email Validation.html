@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation in JavaScript using Regular Expression</title>
+    <script type="text/javascript">
+        function validate() {
+            /*
+                1         2          3          4
+            (yourname)@(domain).(extension)(.extension)
+
+        example:
+            parvez11@simplesnippet.co.in
+            parvez11@simplesnippet.com
+
+            \d - match any digit (equal to [0-9])
+            \w - match any word character (a-z, A-Z, 0-9 & _)
+            */
+            var text = document.getElementById("text1").value;
+            
+            var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/; 
+
+            if (regx.test(text)){
+                document.getElementById("lbltext").innerHTML="Valid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="green";
+            } 
+            else{
+                document.getElementById("lbltext").innerHTML="Invalid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="red";
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h2>Email Validation in JavaScript using Regular Expression</h2>
+    <br>
+    <form>
+
+        Email: <input type="text" id="text1" placeholder="Email">
+        <label id="lbltext" style="color: red; visibility: hidden;"> Invaid Username</label>
+        <br><br>
+
+       <button onclick="validate()" type="button">Submit</button>
+
+    </form>
+
+</body>
+
+</html>
